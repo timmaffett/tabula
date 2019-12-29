@@ -154,9 +154,13 @@ Tabula has bindings for JRuby and R. If you end up writing bindings for another 
     git clone git://github.com/tabulapdf/tabula.git
     cd tabula
 
-    gem install bundler
+    gem install bundler -v 1.5.2             // NEWER version did not work in next step
     bundle install
-    jruby -S jbundle install
+    //jruby -S jbundle install           // DIDNT WORK
+    jruby -S gem install jbundler              // this did
+    gem install rake -v 12.3.1              // had to do this too before development server command
+    
+    //STILLL NOT WORKING -
     ~~~
 
 **Then, start the development server:**
